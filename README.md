@@ -110,6 +110,18 @@ do Windows chamado MSMQ, que depende do PGM. A falha CVE-2025-21307 é uma vulne
 
 Essas vulnerabilidades devem ser corrigidas por meio do hardening no sistema operacional. Não basta somente atualizações do sistema operacional, há a necessidade de uma boa configuração do sistema.
 
+Idealmente, atualizar para o Windows 11 e realizar com determinada frequência atualizações de segurança é uma boa prática. Contudo, isso não é viável para algumas empresas que ainda mantêm essa versão.
+
+Para resolver as 5 vulnerabilidades críticas informadas pelo Wazuh, faremos os seguintes passos:
+
+Desabilitar o IPv6 do agente:
+![Removendo IPv6](docs/remove_ipv6.png)
+
+Bloqueando o serviço MSMQ e o tráfego de rede pelo PGM:
+![Desabilitando o MSMQ e PGM](docs/disable_msmq_pgm.png)
+
+Desabilitando o serviço de LPD:
+![Desabilitando o LPD](docs/disable_lpd.png)
 ---
 
 ## Conclusão
