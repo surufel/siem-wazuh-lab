@@ -9,6 +9,14 @@ O propósito desse laboratório é obter experiência prática com ferramentas d
 
 ---
 
+## O que é um SIEM, XDR? O que é o Wazuh?
+
+Uma ferramenta **SIEM** (_Security Information and Event Management_), ou então, _Gestão de Informações e Eventos de Segurança_; se trata de uma aplicação que coleta e analisa logs para monitorar atividades críticas em uma organização, com rastreamento de eventos de segurança em tempo real. Esses dados permitem identificar e investigar ameaças, riscos e vulnerabilidades. Através de dashboards, equipes de segurança conseguem gerenciar e monitorar essas informações, ainda que, atualmente, a análise dos eventos exija interação humana.
+
+O **XDR**, *Extended detection and response*, ou, *Detecção e resposta estendida* coleta e correlaciona automaticamente dados entre várias camadas de segurança: e-mail, Endpoint, servidor, workload em nuvem e rede. Isso permite uma detecção mais rápida de ameaças e melhor investigação e tempos de resposta por meio de análises de segurança.
+
+O **Wazuh** é uma plataforma de segurança gratuita e de código aberto, que **unifica SIEM e XDR em uma única solução.** Ele monitora endpoints, redes e ambientes em nuvem para detectar ameaças, responder a incidentes e garantir conformidade, sendo hoje uma das ferramentas de cibersegurança open-source mais adotadas no mundo, usada por empresas de todos os portes.
+
 ## Máquinas Virtuais usadas no processo:
 
 _VM do Ubuntu com seu IP:_
