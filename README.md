@@ -137,3 +137,5 @@ Desabilitar o serviço de LPD:
 ---
 
 ## Conclusão
+
+Este laboratório permitiu obter experiência prática com uma ferramenta SIEM/XDR muito utilizada por grandes empresas, aprendi desde a instalação do Wazuh até a análise e mitigação de vulnerabilidades em um ambiente monitorado. Fica evidente que apenas instalar o Sistema Operacional e não fazer nada a respeito não é sinônimo de segurança, e sim de risco. Mitigação reduz risco, mas não elimina o alerta; Deixar seu sistema em dia é importante; alguns patches de segurança do SO chegam com o decorrer das atualizações, o cenário apresentado só nos restou a opção de hardening para proteger o sistema pela falta de suporte do SO. Um SIEM apenas detecta, quem decide o que fazer é o analista; a interpretação e mitigação dos alertas exigiu parte de uma análise humana, a minha parte. A união da ferramenta e do analista de segurança é o que faz a diferença na defesa de um sistema.
