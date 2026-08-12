@@ -47,6 +47,13 @@ Esse score está medindo a porcentagem de compliance que o endpoint teve.
 É categórico que a instalação padrão do Windows não é suficiente para segurança.
 Até mesmo nas versões atuais do Windows, pode ser descoberto vulnerabilidades em um sistema mal protegido.
 
+Na sessão de Threat Hunting, puxei informação das últimas 24 horas. Por volta de 500 alertas no total; 1 falha de login, mas 33 autenticações feitas com sucesso. 
+![Threat Hunting](docs/threat-hunting.png)
+
+Além disso, fui diretamente para a sessão do MITRE ATT&CK, onde as táticas eram mapeadas. Grande parte foi categorizada no T1078 (Valid Accounts), mas também teve outras relacionadas como 
+Account Access Removal, veja na imagem abaixo.
+![MITRE ATT&CK](docs/mitre-attack.png)
+
 Agora, iremos para a seção de Vulnerability Detection. De todas as 21 vulnerabilidades críticas, temos como as 5 maiores vulnerabilidades:
 
 ![Vulnerability Detection](docs/vulnerability-detection.png)
@@ -118,11 +125,11 @@ Desabilitar o IPv6 do agente:
 
 ![Removendo IPv6](docs/remove_ipv6.png)
 
-Bloqueando o serviço MSMQ e o tráfego de rede pelo PGM:
+Bloquear o serviço MSMQ e o tráfego de rede pelo PGM:
 
 ![Desabilitando o MSMQ e PGM](docs/disable_msmq_pgm.png)
 
-Desabilitando o serviço de LPD:
+Desabilitar o serviço de LPD:
 
 ![Desabilitando o LPD](docs/disable_lpd.png)
 
