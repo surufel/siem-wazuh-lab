@@ -115,13 +115,18 @@ Idealmente, atualizar para o Windows 11 e realizar com determinada frequência a
 Para resolver as 5 vulnerabilidades críticas informadas pelo Wazuh, faremos os seguintes passos:
 
 Desabilitar o IPv6 do agente:
+
 ![Removendo IPv6](docs/remove_ipv6.png)
 
 Bloqueando o serviço MSMQ e o tráfego de rede pelo PGM:
+
 ![Desabilitando o MSMQ e PGM](docs/disable_msmq_pgm.png)
 
 Desabilitando o serviço de LPD:
+
 ![Desabilitando o LPD](docs/disable_lpd.png)
+
+
 ---
 
 ## Conclusão
