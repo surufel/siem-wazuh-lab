@@ -58,3 +58,58 @@ Agora, iremos para a seção de Vulnerability Detection. De todas as 21 vulnerab
 - CVE-2024-38199
 - CVE-2025-21298
 - CVE-2025-21307
+
+---
+
+## Explicação das vulnerabilidades
+
+1. [CVE-2024-38063](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38063)
+
+Trata de uma vulnerabilidade de execução remota de código TCP/IP do Windows.
+
+"Um invasor não autenticado poderia enviar repetidamente pacotes IPv6, que incluem pacotes especialmente criados, para uma máquina Windows, o que poderia permitir a execução remota de código.
+A mitigação se refere a uma configuração, uma configuração comum ou uma prática recomendada geral, existindo em um estado padrão, que pode reduzir a severidade da exploração de uma vulnerabilidade."
+
+Foi sugerido a desativação de endereços IPv6 no host como forma de mitigar a vulnerabilidade.
+
+2. [CVE-2024-38140](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38140)
+
+Vulnerabilidade de execução remota de código do RMCAST (_Reliable Multicast Transport Driver_) do Windows.
+
+"Um invasor não autenticado pode explorar a vulnerabilidade enviando pacotes especialmente criados para um soquete aberto do PGM (Multicast geral pragmático) do Windows no servidor, sem qualquer interação do usuário."
+Essa vulnerabilidade só pode ser explorada se houver um programa escutando em uma porta PGM (Multicast geral pragmático). Se o PGM estiver instalado ou habilitado, mas nenhum programa estiver escutando ativamente como receptor, essa vulnerabilidade não poderá ser explorada. O PGM não autentica solicitações, portanto é recomendável proteger o acesso a todas as portas abertas no nível da rede (por exemplo, com um firewall)
+
+Portanto, a mitigação recomendada é: não expor um receptor PGM à internet pública.
+
+3. [CVE-2024-38199](https://www.cve.org/CVERecord?id=CVE-2024-38199)
+
+Vulnerabilidade de execução remota de código do serviço LPD (_Line Printer Daemon_) do Windows
+
+Um invasor não autenticado pode enviar uma tarefa de impressão especialmente criada para um serviço LPD (Line Printer Daemon) do Windows vulnerável compartilhado em uma rede. A exploração bem-sucedida pode resultar na execução remota de código no servidor.
+
+Para mitigar a vulnerabilidade, basta não instalar ou habilitar o serviço LPD (Line Printer Daemon). O LPD não é instalado ou habilitado nos sistemas por padrão, o serviço LPD (Line Printer Daemon) foi anunciado como obsoleto no Windows Server 2012.
+
+4. [CVE-2025-21298](https://www.cve.org/CVERecord?id=CVE-2025-21298)
+
+Vulnerabilidade de execução remota de código no Windows OLE (_Vinculação e incorporação de objeto_, é uma tecnologia que permite incorporar e vincular documentos e outros objetos.).
+
+"Em um cenário de ataque por email, um invasor pode explorar a vulnerabilidade enviando um email especialmente criado para a vítima. A exploração da vulnerabilidade pode envolver uma vítima que abre um email especialmente criado com uma versão afetada do software Microsoft Outlook ou o aplicativo Outlook da vítima que exibe um email especialmente criado. Isso pode fazer com que o invasor execute um código remoto no computador da vítima."
+
+Para se proteger contra essa vulnerabilidade, é recomendado ler as mensagens de email em formato de texto sem formatação. No caso acima, configure o Microsoft Outlook.
+
+5. [CVE-2025-21307](https://www.cve.org/CVERecord?id=CVE-2025-21307)
+
+Vulnerabilidade de execução remota de código do RMCAST (Reliable Multicast Transport Driver) do Windows
+
+Essa vulnerabilidade expõe o mesmo problema encontrado na vulnerabilidade CVE-2024-38140. Ambos os problemas estão relacionados a mesma vulnerabilidade, mas são diferentes pois o CVE-2024-38140 lida com um serviço
+do Windows chamado MSMQ, que depende do PGM. A falha CVE-2025-21307 é uma vulnerabilidade direta do PGM.
+
+---
+
+## Mitigando Vulnerabilidades
+
+Essas vulnerabilidades devem ser corrigidas por meio do hardening no sistema operacional. Não basta somente atualizações do sistema operacional, há a necessidade de uma boa configuração do sistema.
+
+---
+
+## Conclusão
